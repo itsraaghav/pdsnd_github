@@ -7,7 +7,7 @@
 Bikeshare interactive statistics
 
 ### Description
-This program provides a interactive experience to get various stats of the bikeshare data
+This program provides a interactive experience to get various stats of the bikeshare data. The data is available for 3 cities Chicago, new York and Washington.
 
 ### Files used
 bikeshare.py
