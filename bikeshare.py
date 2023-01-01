@@ -191,19 +191,19 @@ def user_stats(df,city, month, day):
 def display_data(df,city, month, day):
     """Displays the data 5 rows at a time for the filters used."""
 
-    print('\nDisplaying the data for chosen filters city: {}, month: {}, day: {}\n'.format(city, month, day))
-    
-    display_option = input("Do you want to view the data? [yes/no] ").lower()
-    while display_option not in ("yes","no"):
-        print("Please enter a valid option! ")
-        input("Do you want to view the data? [yes/no] ").lower()
-    
-    i=0
-    #loop till user says no or index goes beyond the dataframe rows
-    while display_option in ("yes") and (i+5) < df.shape[0]:
-        print((df[i:i+5]).to_json(orient='records'))
-        display_option = input("Do you want to view the data? [yes/no] ").lower()
-        i+=5
+    i = 0
+    raw = input("\nWould you like to see first 5 rows of raw data; type 'yes' or 'no'?\n").lower()
+    pd.set_option('display.max_columns',200)
+
+    while True:            
+        if raw == 'no':
+            break
+        elif raw == 'yes':
+            print(df[i:i+5]) 
+            raw = input("\nWould you like to see next rows of raw data?\n").lower() 
+            i += 5
+        else:
+            raw = input("\nYour input is invalid. Please enter only 'yes' or 'no'\n").lower()
     print('-'*40)
 
 
