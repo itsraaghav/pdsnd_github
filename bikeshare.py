@@ -149,7 +149,7 @@ def trip_duration_stats(df,city, month, day):
     print('\nCalculating Trip Duration for chosen filters city: {}, month: {}, day: {}\n'.format(city, month, day))
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # Display total travel time
     print("Total Trip duration in seconds is: " + str(df['Trip Duration'].sum()))
       
     # TO DO: display mean travel time
@@ -165,18 +165,18 @@ def user_stats(df,city, month, day):
     print('\nCalculating User Stats for chosen filters city: {}, month: {}, day: {}\n'.format(city, month, day))
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # Display counts of user types
     print("Count by User Type : "+ df.groupby(['User Type'])['User Type'].count().to_string())
     print("\n")
 
-    # TO DO: Display counts of gender
+    # Display counts of gender
     if "Gender" in df:
         print("Count by Gender : "+ df.groupby(['Gender'])['Gender'].count().to_string())
     else:
         print("Count by Gender cannot be calculated as the column data is unavailable.")
     print("\n")
 
-    # TO DO: Display earliest, most recent, and most common year of birth
+    # Display earliest, most recent, and most common year of birth
     if "Birth Year" in df:
         print("Earliest year of birth: "+ str(int(df['Birth Year'].min())))
         print("Recent year of birth: "+ str(int(df['Birth Year'].max())))
