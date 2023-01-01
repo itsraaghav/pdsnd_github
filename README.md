@@ -11,6 +11,10 @@ This program provides a interactive experience to get various stats of the bikes
 
 ### Files used
 bikeshare.py
+README.md
+.gitignore
 
 ### Credits
 This project is created based on templates provided in nanodegree udacity data analyst program
+
+
